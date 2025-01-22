@@ -1,0 +1,4 @@
+package org.aarafao.calculatormavenproject
+
+class MethodOrderByAnnotation {
+}

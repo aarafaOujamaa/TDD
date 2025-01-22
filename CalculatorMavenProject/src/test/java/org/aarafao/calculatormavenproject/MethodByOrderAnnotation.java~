@@ -1,0 +1,26 @@
+package org.aarafao.calculatormavenproject;
+
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.TestMethodOrder;
+
+@TestMethodOrder(MethodOrderer.MethodName.class)
+public class MethodByOrderAnnotation {
+
+    @Test
+    public void TestB() {
+        System.out.println("Test A");
+    }
+
+    @Test
+    public void TestA() {
+        System.out.println("Test A");
+    }
+
+    @Test
+    public void TestC() {
+        System.out.println("Test A");
+    }
+
+
+}
