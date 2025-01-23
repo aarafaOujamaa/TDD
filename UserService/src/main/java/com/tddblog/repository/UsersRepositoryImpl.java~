@@ -1,0 +1,24 @@
+package com.tddblog.repository;
+
+import com.tddblog.service.UsersRepository;
+import com.tddblog.service.model.User;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
+public class UsersRepositoryImpl implements UsersRepository {
+
+
+    @Override
+    public boolean save(String firstName, String lastName, String email,  String password, String repeatPassword, String uid) {
+        Map<String, User> usersDb = new HashMap<>();
+        User user = new User(firstName, lastName, email, password, repeatPassword, uid);
+        if(Objects.nonNull(user)) {
+            usersDb.put(firstName + "_" + lastName, user);
+            return true;
+        }
+        return false;
+    }
+
+}
